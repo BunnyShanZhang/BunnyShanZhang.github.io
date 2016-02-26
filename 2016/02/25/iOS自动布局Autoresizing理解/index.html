@@ -3,17 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>BunnyShan&#39;s blog</title>
+  <title>iOS自动布局Autoresizing深入理解 | BunnyShan&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="IOS开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BunnyShan's blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Autoresizing特性综述当UIView的autoresizesSubviews是YES时,(默认是YES),那么在其中的子View会根据自身的autoresizingMask属性来自动适应自身和它superView之间的位置和大小。autoresizingMask是一个枚举类型，此类型可以复选
+typedef NS_OPTIONS(NSUInteger, UIViewAutoresizin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS自动布局Autoresizing深入理解">
+<meta property="og:url" content="http://yoursite.com/2016/02/25/iOS自动布局Autoresizing理解/index.html">
 <meta property="og:site_name" content="BunnyShan's blog">
-<meta property="og:description" content="IOS开发">
+<meta property="og:description" content="Autoresizing特性综述当UIView的autoresizesSubviews是YES时,(默认是YES),那么在其中的子View会根据自身的autoresizingMask属性来自动适应自身和它superView之间的位置和大小。autoresizingMask是一个枚举类型，此类型可以复选
+typedef NS_OPTIONS(NSUInteger, UIViewAutoresizin">
+<meta property="og:image" content="http://yoursite.com/../../../../images/image-0.png">
+<meta property="og:image" content="http://yoursite.com/../../../../images/image-1.png">
+<meta property="og:updated_time" content="2016-02-26T07:27:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BunnyShan's blog">
-<meta name="twitter:description" content="IOS开发">
+<meta name="twitter:title" content="iOS自动布局Autoresizing深入理解">
+<meta name="twitter:description" content="Autoresizing特性综述当UIView的autoresizesSubviews是YES时,(默认是YES),那么在其中的子View会根据自身的autoresizingMask属性来自动适应自身和它superView之间的位置和大小。autoresizingMask是一个枚举类型，此类型可以复选
+typedef NS_OPTIONS(NSUInteger, UIViewAutoresizin">
   
   
     <link rel="icon" href="/favicon.png">
@@ -144,9 +150,7 @@
   
 </aside>
         
-        <section id="main">
-  
-    <article id="post-iOS自动布局Autoresizing理解" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-iOS自动布局Autoresizing理解" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/25/iOS自动布局Autoresizing理解/" class="article-date">
   <time datetime="2016-02-25T13:02:54.000Z" itemprop="datePublished">2016-02-25</time>
@@ -163,8 +167,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/25/iOS自动布局Autoresizing理解/">iOS自动布局Autoresizing深入理解</a>
+    <h1 class="article-title" itemprop="name">
+      iOS自动布局Autoresizing深入理解
     </h1>
   
 
@@ -207,67 +211,20 @@ UIViewAutoresizingFlexibleBottomMargin = <span class="number">1</span> &lt;&lt; 
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hexo快速使用" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/12/16/hexo快速使用/" class="article-date">
-  <time datetime="2015-12-16T08:18:50.000Z" itemprop="datePublished">2015-12-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/工具/">工具</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/16/hexo快速使用/">hexo快速使用</a>
-    </h1>
+    <a href="/2015/12/16/hexo快速使用/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo快速使用</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="hexo基础命令">hexo基础命令</h1><ul>
-<li>hexo new “name” 新建一个博客文章</li>
-<li>hexo generate 生成静态文件</li>
-<li>hexo server 预览自己的博客,在浏览器里面输入<a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a></li>
-<li>hexo deploy 将本地的文件部署到你的github主页上</li>
-</ul>
-<p>这四个命令是最基本的操作，都有简写形式，分别为hexo n “name”, hexo g, hexo s, hexo d</p>
-<h1 id="新建一个页面">新建一个页面</h1><p>首先通过hexo n “name”命令新建一个页面，在source/_posts目录下找到刚才新建的.md文件，用Mou软件打开，大概默认的是这样的:</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: hexo快速使用</span><br><span class="line">date: 2015-12-16 16:18:50</span><br><span class="line"><span class="header">tags: hexo</span><br><span class="line">---</span></span><br></pre></td></tr></table></figure>
-<p>可以编辑标题、时间、标签和内容</p>
-<h1 id="分类设置">分类设置</h1><p>发现上面所做没有分类的选项。我们可以手动加入categories:项，切记冒号后面要空一格再写内容，或者打开scaffolds/post.md文件，在tags: 上面加入categories: ，保存后，重新执行hexo n “name”,会发现新建的页面上有categories:项了<br>scaffolds目录下，是新建页面的模板，执行新建命令时，是根据这里的模板页完成的，所以可以在这里根据自己的需求添加一些默认值</p>
-<h1 id="标签设置">标签设置</h1><p>在编辑文章的时候，tags:后面是设置文章标签的地方，如果有多个标签的话，可以用下面两种方法来设置：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: [标签<span class="number">1</span>，标签<span class="number">2</span>，...标签n]</span><br></pre></td></tr></table></figure>
-<figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">-<span class="ruby"> 标签<span class="number">1</span></span><br><span class="line"></span>-<span class="ruby"> 标签<span class="number">2</span></span><br><span class="line"></span>-<span class="ruby"> 标签n</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/12/16/hexo快速使用/" data-id="cil2a9h2d0007v83tq7g7tsqx" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
-
-  
-  
 </section>
       </div>
       <footer id="footer">
